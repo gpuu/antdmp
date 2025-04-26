@@ -1,0 +1,15 @@
+if unpack ~= _G.unpack or appendfile ~= _G.appendfile then
+    error("Detected function override!")
+end
+
+if isfile("yes.txt") or isfile("dump.txt") then
+    error("Detected unauthorized file creation!")
+end
+
+if not game or not game.HttpGet then
+    error("Invalid execution environment!")
+end
+
+if debug.getinfo or debug.traceback then
+    error("Debugger detected!")
+end
