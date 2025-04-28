@@ -1,5 +1,7 @@
 --moonsec smart anti dump
-(doesnt help against hidden dumper)
+--just use this as loadstring in your script and your script is secure by 50%
+--and better dont use moonsec
+--(doesnt help against hidden dumper)
 
 if unpack ~= _G.unpack or appendfile ~= _G.appendfile then
     error("Detected function override!")
